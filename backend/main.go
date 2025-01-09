@@ -24,7 +24,7 @@ r.Use(CORSMiddleware())
 
 r.GET("/infos", controller.ListInfo)
 
-r.GET("/info/:id", controller.GetInfo)
+r.GET("/infos/:id", controller.GetInfo)
 
 r.POST("/infos", controller.CreateInfo)
 
@@ -36,7 +36,7 @@ r.DELETE("/infos/:id", controller.DeleteInfo)
 
 r.GET("/cmls", controller.ListCml)
 
-r.GET("/cml/:id", controller.GetCml)
+r.GET("/cmls/:id", controller.GetCml)
 
 r.POST("/cmls", controller.CreateCml)
 
@@ -85,7 +85,7 @@ c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
 
 c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
 
-c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT")
+c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT, DELETE, PATCH")
 
 
 if c.Request.Method == "OPTIONS" {
